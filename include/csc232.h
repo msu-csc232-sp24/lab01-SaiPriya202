@@ -17,7 +17,7 @@
 #define FALSE 0
 #define TRUE 1
 
-#define FINISHED_PART_1 FALSE
+#define FINISHED_PART_1 TRUE
 #define FINISHED_PART_2 FALSE
 #define FINISHED_PART_3 FALSE
 
@@ -56,6 +56,14 @@ using std::left;
 using std::right;
 using std::setprecision;
 using std::setw;
+
+const int ROSTER_SIZE(5);
+
+const int NUM_COURSES(3);
+
+double grades[ROSTER_SIZE];
+
+double gradeBook[NUM_COURSES][ROSTER_SIZE];
 
 // TODO: 1.1 Declare a named constant ROSTER_SIZE initialized to the integer value 10.
 
