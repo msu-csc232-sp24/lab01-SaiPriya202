@@ -18,8 +18,8 @@
 #define TRUE 1
 
 #define FINISHED_PART_1 TRUE
-#define FINISHED_PART_2 FALSE
-#define FINISHED_PART_3 FALSE
+#define FINISHED_PART_2 TRUE
+#define FINISHED_PART_3 TRUE
 
 #include <algorithm>
 #include <cassert>
@@ -65,31 +65,35 @@ double grades[ROSTER_SIZE];
 
 double gradeBook[NUM_COURSES][ROSTER_SIZE];
 
-// TODO: 1.1 Declare a named constant ROSTER_SIZE initialized to the integer value 10.
+double maxGrade(int num_elements,double array[]);
+
+int indexOfMaxGrade(int num_rows, int num_columns, double arrays[][NUM_COURSES]);
+
+double maxGrade(int num_elements, double array[]){
+        int max = 0;
+        for (int i = 0; i<num_elements; i++){
+            if (array[max] < array[i]){
+                max = i;
+            }
+        }
+        return array[max];
+    }
 
 
-// TODO: 1.3 Declare a named constant NUM_COURSES initialized to the integer value of 3.
+    int indexOfMaxGrade(int num_rows, int num_columns, double arrays[][ROSTER_SIZE]){
+        int num_rows_max = 0;
+        int num_columns_max = 0;
+        for (int i=0; i< num_rows; i++){
+            for (int j=0; j<num_columns; j++){
+                if (arrays[num_rows_max][num_columns_max]< arrays[i][j]){
+                    num_columns_max = j;
+                    num_rows_max = i;
+                }
+            }
 
-
-// TODO: 1.2 Declare an array named as specified whose size is ROSTER_SIZE that stores floating-point numbers (e.g., double)
-
-
-// TODO: 1.4 Declare a two-dimensional array as specified that has NUM_COURSES rows and ROSTER_SIZE columns that
-//  stores floating point numbers (e.g., double)
-
-
-// TODO: 2.1 Declare a function named as specified that specifies two parameters. The first parameter is an integer that
-//  specifies the number of elements in the array to process and the second parameter is an array of doubles.
-
-
-// TODO: 2.2 Declare function named as specified that specifies three parameters. The first parameter is an integer
-//  that corresponds to the number of rows in the given table, the second parameter is an integer that corresponds to
-//  the number of columns in the table, and the third parameter is for a two-dimensional array of double values.
-
-// TODO: 3.1 - Implement the specified function below
-
-
-// TODO: 3.2 Implement the specified function below
+        }
+        return num_rows_max;
+    }
 
 
 #endif // MSU_CSC232_H_
