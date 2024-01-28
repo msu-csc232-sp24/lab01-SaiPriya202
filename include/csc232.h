@@ -3,7 +3,7 @@
  * Missouri State University, Spring 2024
  *
  * @file    csc232.h
- * @author  Jim Daehn <jdaehn@missouristate.edu>
+ * @author  Jim Daehn <jdaehn@missouristate.edu> 
  * @brief   Macros, libraries and definitions for use in csc232 assignments.
  * @version 0.2023.07.27
  * @date    07/27/2023
